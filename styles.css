@@ -1,9 +1,6 @@
 html {
 	text-align: center;
 }
-.border {
-	border: .6px solid #948f8f;
-}
 .cal-container {
 	display: grid;
 	grid-gap: 1px;
@@ -14,6 +11,7 @@ html {
 	font-size: 0;
 	margin: 0 auto;
 	overflow: hidden;
+	border: .6px solid #948f8f;
 }
 .cal-window { 
 	grid-row: 1; 
@@ -30,78 +28,10 @@ html {
 	font-size: 20px;
 	padding: 10px;
 }
-.key-plus { 
-	grid-row: 2;
-	grid-column: 1;
-}
-.key-minus { 
-	grid-row: 2;
-	grid-column: 2;
-}
-.key-multiply { 
-	grid-row: 2;
-	grid-column: 3;
-}
-.key-divide { 
-	grid-row: 2;
-	grid-column: 4;
-}
-.key-7 { 
-	grid-row: 3;
-	grid-column: 1;
-}
-.key-8 { 
-	grid-row: 3;
-	grid-column: 2;
-}
-.key-9 { 
-	grid-row: 3;
-	grid-column: 3;
-}
-.key-4 { 
-	grid-row: 4;
-	grid-column: 1;
-}
-.key-5 { 
-	grid-row: 4;
-	grid-column: 2;
-}
-.key-6 { 
-	grid-row: 4;
-	grid-column: 3;
-}
 .key-equal {
 	grid-row: 3 / span 4;
 	grid-column: 4;
 	background-color: #ff7b00ed;
-}
-.key-3 { 
-	grid-row: 5;
-	grid-column: 3;
-}
-.key-2 { 
-	grid-row: 5;
-	grid-column: 2;
-}
-.key-1 { 
-	grid-row: 5;
-	grid-column: 1;
-}
-.key-0 {
-	grid-row: 6;
-	grid-column: 1;
-}
-.key-dec {
-	grid-row: 6;
-	grid-column: 2;
-}
-.key-C {
-	grid-row: 6;
-	grid-column: 3;
-}
-.key-container {
-	overflow: hidden;
-	width: 100%;
 }
 .operator {
 	background-color: #d9d9d9;
