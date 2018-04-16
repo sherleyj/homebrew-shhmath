@@ -15,6 +15,9 @@ window.onload = function (){
 	var cur_var = "a";
 	var operator_active = false; // true: between operator press and num press.
 
+	function num_digits(num) {
+		return (num + "").length;
+	}
 
 	function updateWindow(value){
 		calculator_window.innerHTML = value;
@@ -25,12 +28,17 @@ window.onload = function (){
 			clear_all = false;
 			C_AC_key.innerHTML = "C";
 		}
-
 		if (cur_var === "b") {
+			if (num_digits(b) > 21){
+				return;
+			}
 			b += this.innerHTML;
 			updateWindow(b);
 			console.log("key press! ", "cur_var:", cur_var, "a:", a, "b:", b);
 		} else {
+			if (num_digits(a) > 21){
+				return;
+			}
 			a += this.innerHTML;
 			updateWindow(a);
 			console.log("key press! ", "cur_var:", cur_var, "a:", a, "b:", b);
@@ -38,10 +46,10 @@ window.onload = function (){
 	}
 
 	function operatorPress() {
-		cur_operator = this.innerHTML;
 		if (operator != "" && b != "" && a != "") {
 			Compute();
 		}
+		cur_operator = this.innerHTML;
 		if (cur_var === "a") {
 			cur_var = "b";
 		}
