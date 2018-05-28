@@ -7,25 +7,44 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body> 
-	<div class="calc-container">
-		<div class="calc-window">0</div> 
-		<button class="key operator">+</button>
-		<button class="key operator">-</button>
-		<button class="key operator">X</button>
-		<button class="key operator">%</button>
-		<button class="key">7</button>
-		<button class="key">8</button>
-		<button class="key">9</button>
-		<button class="key">4</button>
-		<button class="key">5</button>
-		<button class="key">6</button>
-		<button class="key">1</button>
-		<button class="key">2</button>
-		<button class="key">3</button>
-		<button class="key">0</button>
-		<button class="key">.</button>
-		<button class="key">C</button>
-		<button class="key key-equal">=</button>
+	<div class="toolkit-container">
+		<div class="calc-container">
+			<div class="calc-window">0</div> 
+			<button class="key operator">+</button>
+			<button class="key operator">-</button>
+			<button class="key operator">X</button>
+			<button class="key operator">%</button>
+			<button class="key">7</button>
+			<button class="key">8</button>
+			<button class="key">9</button>
+			<button class="key">4</button>
+			<button class="key">5</button>
+			<button class="key">6</button>
+			<button class="key">1</button>
+			<button class="key">2</button>
+			<button class="key">3</button>
+			<button class="key">0</button>
+			<button class="key">.</button>
+			<button class="key">C</button>
+			<button class="key key-equal">=</button>
+			</div>
+		</div>
+		<div class="abv-container" name="abv-form">
+		<h2>ABV Calculator</h2>
+			<form action="">
+			original gravity:<br />
+			<input type="text" id="og-input" name="og" placeholder="">
+			<br />
+			final gravity:<br />
+			<input type="text" id="fg-input" name="fg" placeholder="">
+			<br><br>
+			<input type="button" value="Calculate" id="abv-submit">
+			</form>
+
+			<div>
+			<div>Alcohol By Volume:</div><div id="abv-output"></div>
+			</div>
+
 		</div>
 	</div>
 </body>

@@ -1,5 +1,12 @@
-html {
+html,body {
 	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.toolkit-container {
+	display: grid;
+	padding: 30px;
 }
 .calc-container {
 	display: grid;
@@ -36,4 +43,10 @@ html {
 }
 .operator {
 	background-color: #d9d9d9;
+}
+
+.abv-container {
+	padding: 30px;
+	/*width: 100%;*/
+	background-color: #a3adca;
 }

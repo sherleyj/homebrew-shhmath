@@ -6,6 +6,7 @@ window.onload = function (){
 	var keys = document.getElementsByClassName("key");
 	var operators = document.getElementsByClassName("operator");
 	var C_AC_key = keys[15];
+	var abv_form = document.getElementById("abv-submit");
 
 	var a = "";
 	var b = "";
@@ -111,6 +112,13 @@ window.onload = function (){
 		}
 	}
 
+	function abvCalc() {
+		var og = document.getElementById("og-input").value;
+		var fg = document.getElementById("fg-input").value;
+		var abv = (og - fg) * 131.25;
+		document.getElementById("abv-output").innerHTML = abv.toFixed(2)+"%";
+	}
+
 	for (var i = 4; i < 14; i++){
 		var key = keys[i]
 		key.addEventListener("click", varPress);
@@ -123,7 +131,6 @@ window.onload = function (){
 	keys[16].addEventListener("click", Compute);
 	keys[15].addEventListener("click", C_AC);
 	keys[14].addEventListener("click", Period);
-
-
+	abv_form.addEventListener("click", abvCalc);
 }
 
